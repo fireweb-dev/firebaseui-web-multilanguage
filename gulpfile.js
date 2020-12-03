@@ -71,7 +71,7 @@ const ESM_DEPS = [
 
 // The external dependencies needed by FirebaseUI as CommonJS modules.
 const CJS_DEPS = [
-  'node_modules/dialog-polyfill/dialog-polyfill.js'
+  'node_modules/dialog-polyfill/dist/dialog-polyfill.js'
 ].concat(MDL_COMPONENTS.map(component => `node_modules/material-design-lite/src/${component}.js`));
 
 // Import esm modules.
@@ -353,7 +353,7 @@ function buildCss(isRtl) {
         webRoot: 'node_modules/material-design-lite/src',
       }));
   const dialogPolyfillSrcs = gulp.src(
-      'node_modules/dialog-polyfill/dialog-polyfill.css');
+      'node_modules/dialog-polyfill/dist/dialog-polyfill.css');
   let firebaseSrcs = gulp.src('stylesheet/*.css');
 
   // Flip left/right, ltr/rtl for RTL languages.
