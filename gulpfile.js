@@ -398,3 +398,11 @@ gulp.task('build-all', gulp.series(
     'build-npm', 'build-esm', 'build-css', 'build-css-rtl',
     'clean'
 ));
+
+// Executes the tasks for the Fireweb template.
+gulp.task('build-fireweb', gulp.series(
+  'build-externs', 'build-ts',
+  'build-esm', 'build-esm-cs',
+  'build-css',
+  'clean'
+));
